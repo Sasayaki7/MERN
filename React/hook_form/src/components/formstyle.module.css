@@ -1,0 +1,52 @@
+.inputForm{
+    display: flex;
+    border-radius: 5px;
+    border: solid slategray 1px;
+    background-color: lightgray;
+    align-items: center;
+    width: 600px;
+    margin:auto;
+    height: 50px;
+}
+
+.inputForm label{
+    color: gray;
+    width: 100px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.inputForm input{
+    border-radius: 3px;
+    border: solid gray 1px;
+    height: 25px;
+}
+
+.formOutput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.formDisplay{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+h2{
+    margin: auto;
+}
+
+.formDataDisplay{
+    display: flex;
+    gap: 10px;
+    width: 500px;
+    margin: auto;
+}
+
+
+.label{
+    width: 80px;
+}
