@@ -1,0 +1,42 @@
+
+.header{
+    background-color: #6aa84f;
+    border: solid black 2px;
+    height: 100px;
+    margin: auto;
+    width: 100%;
+
+}
+
+.main{
+    background-color: #e06666;
+    border: solid black 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 10px;
+}
+
+.navigation{
+    background-color: #6fa8dc;
+    border: solid black 2px;
+    display: inline-block;
+    height: 480px;
+    flex: 1;
+}
+
+.subcontents{
+    background-color: #ffd966;
+    border: solid black 2px;
+    height: 400px;
+    width: 200px;
+    flex: 1;
+}
+
+.advertisement{
+    background-color: #b4a7d6;
+    border: solid black 2px;
+    width: 100%;
+    height: 100px;
+}

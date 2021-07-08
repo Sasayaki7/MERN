@@ -1,0 +1,21 @@
+.app{
+  background-color: #dddddd;
+  width: 96%;
+  height: 100%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subline1{
+  display: flex;
+  gap: 10px;
+}
+
+.subline2{
+  display: flex;
+  gap: 10px;
+
+}
