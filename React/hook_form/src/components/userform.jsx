@@ -19,7 +19,7 @@ const UserForm = (props) => {
                 <input type="text" onChange={ (e) => setFirstName(e.target.value) } />
             </div>
             {(0<firstName.length && firstName.length<2)? (<p className={styles.errorMessage}>First Name must be at least 2 characters</p>): ''}
-
+        
             <div className={styles.inputForm}>
                 <label>Last Name: </label> 
                 <input type="text" onChange={ (e) => setLastName(e.target.value) } />
