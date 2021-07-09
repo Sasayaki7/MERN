@@ -39,6 +39,12 @@ h2{
     margin: auto;
 }
 
+.errorMessage{
+    color: red;
+    width: 600px;
+    margin: auto;
+}
+
 .formDataDisplay{
     display: flex;
     gap: 10px;
