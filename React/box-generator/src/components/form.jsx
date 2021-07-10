@@ -7,6 +7,7 @@ const Form = props => {
         console.log(e)
         let colorBox = document.getElementById("colorInput")
         props.onNewBox(colorBox.value, document.getElementById("size").value)
+        colorBox.value = ""
     }
     return (
         <form onSubmit = {submitBox}>
