@@ -1,0 +1,21 @@
+.tasks{
+    display: flex;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+    color: red;
+}
+
+.text{
+    width: 450px;
+    text-align: right;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: grey solid 1px;
+    border-radius: 5px;
+    height: 40px;
+}
