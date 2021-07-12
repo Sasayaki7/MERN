@@ -1,0 +1,10 @@
+.selected{
+    background-color: black;
+    color: white;
+}
+
+.tab{
+    border: solid 2px gray;
+    height: 50px;
+    width: 120px;
+}

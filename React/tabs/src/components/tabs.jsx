@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
+import styles from './tabs.module.css'
+
+
+const Tab = (props)=>{
+
+    const [tab, setTab] = useState(null);
 
 
 
-const Tab = (props){
+    const setTabContent = (event, i) =>{
+        props.setTabContent(i.content);
+        if(tab){
+            tab.classList.remove(styles.selected)
+        }
+        event.target.classList.add(styles.selected);
+        setTab(event.target);
 
-
+    }
 
     return (
-        <button></button>
+        <div>
+            {props.tab.map((tab, idx) => <button className = {styles.tab} key={idx} onClick={(event) => setTabContent(event, tab)}>{tab.label}</button>)}
+        </div>
     )
 }
 
