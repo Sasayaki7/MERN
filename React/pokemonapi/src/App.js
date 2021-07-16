@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <button onClick={clickButton}>Fetch Pokemon</button><ol>
-      {clicked?pokemons.map((pokemon)=> <li>{pokemon.name}</li>):null}
+      {clicked ? pokemons.map((pokemon)=> <li>{pokemon.name}</li>):null}
       </ol>
     </div>
   );

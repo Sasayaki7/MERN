@@ -22,13 +22,13 @@ const People = props =>{
 
     return (
         <div>
-            <h1>{people? people.name: ''}</h1>
+            <h1>{ people? people.name: '' }</h1>
             <br/>
             <p><b>Height:</b> {people? people.height: ''}cm</p>
             <p><b>Mass:</b> {people? people.mass: ''}kg</p>
-            <p><b>Hair Color:</b> {people? people.hair_color: ''}</p>
+            <p><b>Hair Color:</b> { people? people.hair_color: ''}</p>
             <p><b>Skin Color:</b> {people? people.skin_color: ''}</p>
-            <p><b>Homeworld: </b> {people? <Link to={people.homeworldLink}>{people.homeworld}</Link>: ''}</p>
+            <p><b>Homeworld: </b> { people? <Link to={ people.homeworldLink }>{people.homeworld}</Link>: ''}</p>
         </div>
     )
 }
