@@ -19,7 +19,7 @@ const ProductForm = props =>{
 
     const handleSubmit = e =>{
         e.preventDefault();
-        axios.post('http://localhost:8000/api/new', {...formState})
+        axios.post('http://localhost:8000/api/products/new', {...formState})
         .then(resp => console.log(resp.data))
         .catch(err=> console.log(err))
         setFormState(initialForm)
