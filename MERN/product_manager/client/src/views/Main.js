@@ -5,7 +5,7 @@ import ProductList from '../components/productList';
 
 const Main = props =>{
 
-    const [products, setProducts] = useState({products: []})
+    const [products, setProducts] = useState([])
     const [ready, setReady] = useState(false)
     useEffect(()=>{
         axios.get('http://localhost:8000/api/products')
@@ -18,7 +18,7 @@ const Main = props =>{
     return (
         <>
             <ProductForm/>
-            {ready? <ProductList products = {products}/>:null}
+            {ready? <ProductList products = {products} setProducts={setProducts}/>:null}
         </>
     )
 }
