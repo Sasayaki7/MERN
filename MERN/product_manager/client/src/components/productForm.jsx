@@ -1,40 +1,20 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import axios from 'axios';
-import { navigate } from '@reach/router';
+import ProductFormContext from '../context/productFormContext';
 
 const ProductForm = props =>{
 
-    const initialForm = {
-        title: '',
-        price: '',
-        description: ''
-    }
-    const {product} = props;
-    const [formState, setFormState] = useState(product? product: initialForm)
+
+    const {submissionFunction} = props;
+    const {formState, setFormState} = useContext(ProductFormContext);
     const {price, title, description} = formState;
     const handleChange = e =>{
         setFormState({...formState, [e.target.name]: e.target.value})
     }
 
-    if(product&&formState.title === ''){
-        setFormState(product)
-    }
-
     const handleSubmit = e =>{
         e.preventDefault();
-        if (product){
-            axios.put(`http://localhost:8000/api/products/${props.obj_id}`, {...formState})
-            .then(resp => {console.log(resp.data)
-                navigate('/products') 
-            })
-            .catch(err=> console.log(err))
-        }
-        else{
-            axios.post('http://localhost:8000/api/products/new', {...formState})
-            .then(resp => console.log(resp.data))
-            .catch(err=> console.log(err))
-            setFormState(initialForm)
-        }
+        submissionFunction(formState);
     }
 
     return (
@@ -53,7 +33,7 @@ const ProductForm = props =>{
                     <label htmlFor='description'>Description</label>
                     <textarea name='description' rows='5' columns='60' onChange={handleChange} value={description}/>
                 </div>
-                <input type="submit" value={product? "Update" : "Create"}/>
+                <input type="submit" value={"Submit"}/>
             </form>
         </div>
     )

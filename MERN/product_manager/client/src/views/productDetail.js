@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import { useState, useEffect } from 'react';
+import DeleteButton from '../components/deleteButton';
 
 const ProductDetail = props =>{
     const [product, setProduct] = useState({title: '', price: '', description: ''})
@@ -12,13 +13,8 @@ const ProductDetail = props =>{
         .catch(err=>console.log(err))
     }, [])
 
-    const handleClick = e =>{
-        axios.delete(`http://localhost:8000/api/products/${props.id}`)
-        .then(resp => {
-            console.log(resp)
-            navigate('/products')
-        })
-        .catch(err => console.log(err))
+    const deleteProduct = id =>{
+        navigate('/products')
     }
     return (
         <div>
@@ -26,7 +22,7 @@ const ProductDetail = props =>{
             <p>Price: {product.price}</p>
             <p>Description: {product.description}</p>
             <Link to={`/products/${props.id}/edit`}>Edit</Link>
-            <button onClick = {handleClick}>Delete</button>
+            <DeleteButton id={props.id} callback={() => deleteProduct(props.id)}/>
         </div>
     )
 }
