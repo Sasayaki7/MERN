@@ -7,7 +7,7 @@ const DeleteButton = props => {
     const {id, callback} = props
 
     const handleClick = (e) =>{
-        axios.delete(`http://localhost:8000/api/products/${id}`)
+        axios.delete(`http://localhost:8000/api/authors/${id}`)
         .then(response => {
             callback();
         })
