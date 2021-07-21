@@ -1,0 +1,22 @@
+.popup{
+    position: fixed;
+    top: 100px;
+    height: 600px;
+    width: 60%;
+    left: 20%;
+    background-color: white;
+    border: solid black 2px;
+}
+
+.midText{
+    margin: auto;
+    margin-top: 200px;
+}
+
+
+.buttonRow{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 100px;
+}
