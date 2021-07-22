@@ -10,7 +10,7 @@ const PlayerStatusList = props =>{
         axios.get('http://localhost:8000/api/players/')
         .then(resp => setStatusList(resp.data))
         .catch(err=> console.log(err))
-    }, [])
+    }, [id])
 
     const changeStatus = (player, newStatus) =>{
         axios.put(`http://localhost:8000/api/players/${player}/status`, {game: id, status: newStatus})
@@ -46,14 +46,14 @@ const PlayerStatusList = props =>{
                     return <tr key={idx}>
                             <td>{player.name}</td>
                             <td>
-                                <button onClick={() => changeStatus(player._id, "Playing")} className={activity==="Playing"? "btn btn-success": "btn"}>Playing</button>
+                                {/* <button onClick={() => changeStatus(player._id, "Playing")} className={activity==="Playing"? "btn btn-success": "btn"}>Playing</button>
                                 <button onClick={() => changeStatus(player._id, "Not Playing")} className={activity==="Not Playing"? "btn btn-danger": "btn"}>Not Playing</button>
-                                <button onClick={() => changeStatus(player._id, "Undecided")} className={activity==="Undecided"? "btn btn-warning": "btn"}>Undecided</button>
+                                <button onClick={() => changeStatus(player._id, "Undecided")} className={activity==="Undecided"? "btn btn-warning": "btn"}>Undecided</button> */}
                                 
-                                {/* <StatusSelector 
-                                initial={player.status[id-1].activity}
+                                <StatusSelector 
+                                initial={activity}
                                 callback={changeStatus}
-                                player={player._id}/>  */}
+                                player={player._id}/> 
                                 </td>
                         </tr>
                     })}

@@ -10,7 +10,8 @@ const Selector = props => {
         <div className={styles.selector}>
             {
             items.map((obj, idx) =>{
-                    return <div className={styles.straightener} key={idx}><Link onClick = {() => setSelected(obj.text)} to={obj.route}>
+                    return <div className={styles.straightener} key={idx}>
+                        <Link onClick = {() => setSelected(obj.text)} to={obj.route}>
                         {selected === obj.text ? <b>{obj.text}</b>: obj.text}
                     </Link>
                     { idx!==items.length-1 && <p>|</p> }

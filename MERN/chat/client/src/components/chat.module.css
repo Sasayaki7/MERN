@@ -1,0 +1,70 @@
+.inputRow{
+    display: flex;
+
+}
+
+
+.welcome{
+    font-style: italic;
+}
+
+
+.chatWindow{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 800px;
+    width: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: auto;
+    gap: 5px;
+}
+
+
+
+
+.selfRow{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bubble{
+    border: black solid 1px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.selfB{
+    background-color: green;
+    margin-right: 15px;
+}
+
+.otherRow{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.otherB{
+    background-color: lightslategrey;
+    margin-left: 15px;
+}
+
+.title{
+    color: black;
+    font-size: 14pt;
+    margin-left: 10px;
+    margin-top: 3px;
+    text-align: left;
+}
+
+.chat{
+    color: black;
+    font-size: 12pt;
+    margin-left: 20px;
+    width: 260px;
+    text-align: left;
+}
